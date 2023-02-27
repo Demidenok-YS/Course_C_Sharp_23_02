@@ -8,6 +8,8 @@ int N = int.Parse(Console.ReadLine()!),
 
 Console.Write("Последовательность четных чисел от 1 до ");
 Console.Write(N);
+// Сonsole.Writeline($"Последовательность четных 
+// чисел от 1 до {N} ");
 Console.WriteLine(":");
 
 while (count <= N)
