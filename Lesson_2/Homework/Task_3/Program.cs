@@ -25,3 +25,22 @@ else
     Console.WriteLine("Третьей цифры нет");
 }
 
+/*
+
+void ThirdNum(int num)
+{
+    Console.Write($"{num} ->");   -- отображение результата "12345 -> 3"
+    if (num < 100)
+    {
+        Console.WriteLine("Третьей цифры нет");
+        return;    --завершает функцию текста
+    }
+    while (num > 999) num /= 10;  -- num = num / 10
+    Console.WriteLine(num % 10); 
+}
+
+ThirdNum(int.Parse(Console.ReadLine()!));
+
+
+
+*/

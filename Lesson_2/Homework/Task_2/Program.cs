@@ -16,3 +16,29 @@ Console.WriteLine(M);
 
 DelNum(M);
 
+/*
+
+void NumRendon()    -- ставим 1ю и 3ю цифру рядом
+{
+    int num = new.Random().Next(100, 1000);
+    Console.WriteLine($"{num} -> {num / 100}{num % 10}");
+}
+
+NumRendom();
+
+Или
+
+string SecondNum(int num)   -- 
+{
+    if ((-1000 < num && num < -99) || (num < 1000 && num > 99))
+        returm $"{num} -> {num / 100 * 10 + num % 10}";
+    return "Введенное число не является трехзначным";
+}
+
+Console.WriteLine(SecondNum(int.Parse(Console.ReadLine()!)));
+
+123 -> 13
+123/100 ->1  находим первую цифру
+123%10 ->3   находим последнюю
+1 * 10 + 3 = 13
+*/
