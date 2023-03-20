@@ -27,20 +27,20 @@ Console.WriteLine(result);
 
 // 2 вариант
 
-int CountNum()
-{
-    int count = 0;
-    string word;
+// int CountNum()
+// {
+//     int count = 0;
+//     string word;
 
-    while(true)       //бесконечный цикл
-    {
-        Console.Write("Введите значение: ");
-        word = Console.ReadLine()!;
+//     while(true)       //бесконечный цикл
+//     {
+//         Console.Write("Введите значение: ");
+//         word = Console.ReadLine()!;
 
-        if (word == "") return count;   // "" пустая строка, кот заканчивается enter
-        else if (int.Parse(word > 0) count += 1;
-    }
-}
+//         if (word == "") return count;   // "" пустая строка, кот заканчивается enter
+//         else if (int.Parse(word > 0) count += 1;
+//     }
+// }
 
-int count = CountNum();
-Console.WriteLine("Количество чисел больше нуля:");
+// int count = CountNum();
+// Console.WriteLine("Количество чисел больше нуля:");
