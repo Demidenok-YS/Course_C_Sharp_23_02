@@ -36,13 +36,6 @@ int[,] MassNum(int row, int column, int from, int to)
     return arr;
 }
 
-string Check(int row, int col)
- {
-    if (row != col ) 
-    return "Задан прямоугольный массив. Задача будет решена корректно.";
-    else 
-    return "Задан не прямоугольный массив. Задача решится некорректно.\n Нажмите enter и попробуйте снова.";
- }
 
 int[] SearchSum(int[,] arr)
 {
@@ -69,10 +62,10 @@ int MinSum(int[] arr)
 {
     int min_num = arr[0];
     int min_index = 0;
-    for (int i = 0; i < arr.Length; i++)
+    for (int i = 1; i < arr.Length; i++)
     {
         if (min_num > arr[i])
-        min_index = i;
+        min_index = i + 1;
     }
     return min_index;
 }
@@ -80,8 +73,7 @@ Console.WriteLine("Введите число строк: ");
 int row_num = int.Parse(Console.ReadLine()!);
 Console.WriteLine("Введите число столбцов: ");
 int col_num = int.Parse(Console.ReadLine()!);
-string text = Check(row_num, col_num);
-Console.WriteLine(text);
+
 Console.WriteLine();
 Console.WriteLine("Введите нижнюю границу массива: ");
 int start = int.Parse(Console.ReadLine()!);
@@ -93,9 +85,15 @@ int[,] mass = MassNum(row_num, col_num, start, stop);
 Console.WriteLine("Массив:  ");
 Print(mass);
 
-int[] mass1 = SearchSum(mass);
-Console.WriteLine("Построчная сумма :  ");
-Print2(mass1);
+if (row_num != col_num)
+{
+    int[] mass1 = SearchSum(mass);
+    Console.WriteLine("Построчная сумма :  ");
+    Print2(mass1);
 
-int str = MinSum(mass1);
-Console.WriteLine($"В {str} строке наименьшая сумма элементов.");
+    int str = MinSum(mass1);
+    Console.WriteLine();
+    Console.WriteLine($"В {str} строке наименьшая сумма элементов.");
+}
+else 
+    Console.WriteLine("Задан не прямоугольный массив.");
