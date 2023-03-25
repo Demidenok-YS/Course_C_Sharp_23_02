@@ -4,16 +4,20 @@
 // M = 1; N = 5 -> "2, 4"
 // M = 4; N = 8 -> "4, 6, 8"
 
-int SumDigits(int N)        
+void PrintEven(int M, int N)        
 {
-    if (N == 0) return 0;       
-    Console.WriteLine($"Число {N}, Сумма = {N % 10} + рекурсия от ({N / 10})");
-    return N % 10 + SumDigits(N / 10);
-    
+        if (M > N) return;
+        PrintEven(M, N - 2);
+        Console.Write($"{N}, "); 
 }
 
 Console.WriteLine("Введите число: ");
+int m = int.Parse(Console.ReadLine()!);
+Console.WriteLine("Введите число: ");
 int n = int.Parse(Console.ReadLine()!);
 
-int sum = SumDigits(n);
-Console.WriteLine($"Сумма = {sum}");
+if (n / 2 != 0)
+    n = n - 1;
+
+Console.WriteLine("Вывод на экран: ");
+PrintEven(m,n);
