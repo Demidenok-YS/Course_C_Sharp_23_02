@@ -16,6 +16,8 @@ int A = int.Parse(Console.ReadLine()!);
 Console.WriteLine("Введите степень: ");
 int B = int.Parse(Console.ReadLine()!);
 
-int res = Degree(A, B);
+
 Console.WriteLine();
-Console.WriteLine($"Возведение в степень: {res} ");
+
+Console.WriteLine($"Возведение в степень: {Degree(A, B)}");  // int res = Degree(A, B);
+                                                            // Console.WriteLine($"Возведение в степень: {res} ");
